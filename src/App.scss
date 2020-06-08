@@ -1,0 +1,193 @@
+$warningColor: coral;
+
+input{
+    flex: 1 1;
+    padding-left: 10px;
+}
+
+ input[type=text]:focus {
+   border-bottom: 1px solid #424242 !important;
+   box-shadow: 0 1px 0 0 #424242 !important;
+ }
+ input[type=password]:focus {
+   border-bottom: 1px solid #424242 !important;
+   box-shadow: 0 1px 0 0 #424242 !important;
+ }
+
+%container{
+    margin: auto;
+    box-shadow: 1px 2px 5px #bbb;
+    margin-top: 100px;
+}
+%head{
+    width: 100%;
+    background: #777;
+    text-align: center;
+    font-family: calibri;
+    color: white;
+    font-size: 2em;
+}
+#root>.container{
+    padding: 1em 0px;
+}
+#containerView{
+    @extend %container;
+    width: 700px;
+    .head{
+        @extend %head;
+        display: flex;
+        justify-content: space-between;
+    }
+    .statistic {
+        text-align: left;
+        font-size: .5em;
+        padding: 5px 0px;
+        font-weight: bold;
+        padding-left: 5px;
+        align-items: center;
+        display: flex;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+    }
+    .search {
+        margin: 0px 1em 5px 0px;
+    }
+    .contact-rows{
+        display: flex;
+        flex-direction: column;
+        .contact-row{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #e8e8e8;
+            text-align: center;
+            font-family: calibri, verdana;
+            background: white;
+            .contact-address{
+                width: 100%;
+                word-break: break-word;
+                margin: 0px;
+            }
+            .contact-row-input{
+                flex: 1 1;
+                padding-left: 10px;
+                margin-left: 5px;
+                height: 1.5em;
+                margin: .7em 17px;
+            }
+        }
+    }
+    .add-contact-block{
+        display: flex;
+        padding: 5px;
+        background: #eee;
+        padding-bottom: 5px;
+        .input-contact{
+            flex: 1 1;
+            padding-left: 10px;
+            height: 2em;
+            padding: 0;
+            margin: 0;
+        }
+        .add-contact{
+            color: #555;
+            border: 1px solid #ccc;
+            padding: 3px 6px;
+            border-radius: 2px;
+            background: #ddd;
+            margin-left: 15px;
+        }
+    }
+}
+#containerAuth{
+    @extend %container;
+    width: 400px;
+    .head{
+        @extend %head;
+    }
+    .content{
+        display: flex;
+        padding: 25px 0px;
+        background: #eee;
+        flex-direction: column;
+        justify-content: center;
+        .inputs{
+            display: flex;
+            justify-content: center;
+            min-height: 150px;
+            .loading{
+                height: 8em;
+                align-items: center;
+                display: flex;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+            margin: 15px 0px;
+        }
+    }
+}
+
+.form-error-block{
+    font-size: .8em;
+    color: $warningColor;
+    font-style: italic;
+}
+.fetch-error{
+    color: $warningColor;
+    font-weight: bold;
+}
+
+.MuiTableRow-root:nth-child(even){
+    background-color: #efefef;
+}
+
+.MuiExpansionPanel-root{
+    margin: 5px 0px;
+}
+
+.MuiExpansionPanelSummary-root.Mui-expanded{
+    color:white;
+    background: #757575;
+    margin-top: 5px;    
+}
+
+.main-info-block{
+    margin: 3em 0px 2em 0px ;
+    color: #444;
+    .main-info-col{
+        margin: 1em 0px;
+        display: flex !important;
+        align-items: center !important;
+        .main-info-label{
+            font-size: 1em;
+            font-style: italic;
+        }
+        .main-info-value{
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.MuiFormControl-fullWidth{
+    padding: 0 !important;
+    margin: 0 !important;
+    .MuiAutocomplete-inputRoot{
+        margin: 0 !important;
+    }
+}
+
+.nav-info-block{
+    display: flex;
+    font-size: .9em;
+    float: right;
+    margin-right: 10px;
+    align-items: center;
+    font-weight: bold;
+}
